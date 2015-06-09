@@ -1,0 +1,26 @@
+<h1 style = "text-align:center">New Log</h1>
+
+<h3> congrats you are in the landing page</h3>
+
+<%=form_for :log, url: logs_path do |f| %>
+	
+	<div class="form-group">
+		<%=f.label :title%>
+		<%=f.text_field :title, class: "form-control"%>
+	</div>
+	
+	<div class="form-group">
+		<%=f.label :body%>
+		<%=f.text_field :body, class: "form-control"%>
+	</div>
+
+	<%= f.submit "Submit", class: "btn btn-lg btn-primary"%>
+<%end%>
+
+<% @logs.each do |log|%>
+
+	<strong><p style="text-align:center"><%=log.title.capitalize%></strong><br/><%=time_ago_in_words(log.created_at)%> ago</p>
+	<p style="text-align:center"><%=log.body.capitalize%></p>
+
+
+<%end%>
