@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Worklog</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
 	<%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 </head>
 <body>
-<div class="container">
-	<div id="content" class="col-md-8 col-md-offset-2 ">
-		<%= yield %>
-	</div>
+	<div class="container">
+		
+		<div id="content" class="col-md-10 col-md-offset-1 ">
+			<%= yield %>
+		</div>
 
-</div>
+		
+
+	</div>
 </body>
 </html>
