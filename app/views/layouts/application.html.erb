@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Worklog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
- 
-  <%= csrf_meta_tags %>
+	<title>Worklog</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+	<%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+	<div id="content" class="col-md-8 col-md-offset-2 ">
+		<%= yield %>
+	</div>
 
-<%= yield %>
-
+</div>
 </body>
 </html>
