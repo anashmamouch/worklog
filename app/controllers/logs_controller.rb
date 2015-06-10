@@ -2,6 +2,7 @@ class LogsController < ApplicationController
 
 	def index
 		@logs = Log.paginate(:page => params[:page],:per_page => 10).order('created_at DESC')
+		fresh_when @logs
 	end
 
 	def create
